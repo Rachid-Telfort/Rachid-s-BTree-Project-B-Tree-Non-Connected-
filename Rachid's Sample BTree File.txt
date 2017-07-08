@@ -1,0 +1,15 @@
+insert: 10qq 11aa 11bb 12aa 13aa 14aa 15rr 16yy 17uu 18qq 19oo 20dd 20zz
+print-sector: 0 1 2 3 4 5 6 7 8 9 10 100000 500 499
+specs:
+search: 10qq 11aa 20dd
+remove: 15rr 14aa 13aa
+print-records:
+print-BTree:
+print-HDD:
+height:
+record-count:
+file-input: Rachid's Sample BTree Record Input File.txt
+file-output: C:\Users\Rachid\Desktop\Rachid's Sample BTree Output File.rtf
+clear:
+reformat: 2 3 10000 10000 3 4
+file-input: Rachid's Sample BTree Record Output File.txt
