@@ -236,7 +236,7 @@ int main(int argc, char* argv[])
                 BT=NULL;
                 BT=new BTree(keyLength, recordLength, sectorLength, numberOfSectors);
 
-                if(numberOfRecords<=0)
+                if(numberOfRecords<3)//Fixed this code. This caused an infinite loop in the delete procedure before if number of records was 1.
                 {
                     numberOfRecords=3;
                 }
@@ -251,7 +251,7 @@ int main(int argc, char* argv[])
                     numberOfRecords--;
                 }
 
-                if(numberOfKeys<=0)
+                if(numberOfKeys<4)//Fixed this code. This caused an infinite loop int the delete procedure before if number of keys was 2.
                 {
                     numberOfKeys=4;
                 }
@@ -266,8 +266,7 @@ int main(int argc, char* argv[])
                     numberOfKeys--;
                 }
 
-                std::stringstream numberOfRecordsSS;
-                numberOfRecordsSS<<BT->getNumberOfRecords();
+                //Removed the std::stringstream numberOfRecordsSS; numberOfRecordsSS<<BT->getNumberOfRecords(); code since it was not needed.
 
                 std::stringstream sectorAddressLengthSS;
                 sectorAddressLengthSS<<BT->getNumberOfSectors();
